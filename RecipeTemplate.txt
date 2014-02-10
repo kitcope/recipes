@@ -1,0 +1,32 @@
+Name: 
+
+Precis: 
+
+Serves: number
+
+Preparation time: Integer and/or decimal fraction days, hours or minutes. Fractions may get rounded to nearest quarter
+
+Cooking time: Integer and/or decimal fraction days, hours or minutes. Fractions may get rounded to nearest quarter
+
+Ingredients: Quantity: Integer and/or decimal fraction  Fractions may get rounded to nearest quarter 
+
+	     Unit: kg(s), gram(s), litre(s), tsp, tbsp
+	     
+	     Description: plaintext.
+
+
+
+Method:      Plaintext. May include:
+
+			Dimensions: cm(s) Fractions may get rounded to nearest quarter 
+
+			Temperature: degrees Unit: C or F
+
+
+
+
+
+
+Service:
+
+Attribution:

@@ -1,0 +1,11 @@
+h2 { color: red}
+
+
+li { list-style-type:none}
+
+b {border:1px solid black;
+ background-color:red;
+ color:white;
+ padding-left:0.5em;
+ padding-right:0.5em;
+}

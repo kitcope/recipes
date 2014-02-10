@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="recipe.css">
+	<title>Apple, Rhubarb and ginger cake</title>
+	<script language="javascript" src="recipe.js"></script> 
+</head>
+<body onLoad="unitFunction(0, false), unitFunction(1, false), unitFunction(2, false), timeFunction(), quantityFunction()" >
+<h2 class="recipeName">Apple, Rhubarb and ginger cake</h2>
+<div class="recipePrecis">A seasonal moist spicy afternoon cake.</div>
+<br>
+<table>
+	<th class="servesLabel" align="left">Serves</th>
+	<th colspan="7" align="left">
+		<select id="servesOption" onchange="unitFunction(0, false)">
+			<option value="1" >1</option>
+			<option value="2" >2</option>
+			<option value="3" >3</option>
+			<option value="4" >4</option>
+			<option value="5" >5</option>
+			<option value="6" >6</option>
+			<option value="7" >7</option>
+			<option value="8" >8</option>
+			<option value="9" >9</option>
+			<option value="10" selected="true">10</option>
+		</select>
+	</th>
+	<tr>
+		<td id="prepTimeLabel">Preparation:</td>
+		<td class=recipeTime id="prepTime">25.0</td>
+		<td id="prepTimeUnit">minutes</td>
+		<td></td>
+		<td></td>
+		<td>Start:</td>
+		<td><div id="startTime"></div></td>
+		<td><button onclick="timeFunction()">Reset</button></td>
+	</tr>
+	<tr>
+		<td id="cookTimeLabel">Cooking:</td>
+		<td class=recipeTime id="cookTime">1.25</td>
+		<td id="cookTimeUnit">hours</td>
+		<td></td>
+		<td></td>
+		<td>End:</td>
+		<td><div id="endTime"></div></td>
+		<td></td>
+	</tr>
+</table>
+<br>
+<table class="ingredients">
+	<th class="ingredients" width="200px" align="left">Ingredients</th>
+	<th colspan="3" align="left"><button id="ingredientUnitButton" onclick="unitFunction(0, true)" >Change units</button></th>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">250.0</td>
+		<td class="unit">grams</td>
+		<td class = "description">self raising flour </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">1.0</td>
+		<td class="unit">tbsp</td>
+		<td class = "description">baking powder </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">150.0</td>
+		<td class="unit">grams</td>
+		<td class = "description">butter </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">170.0</td>
+		<td class="unit">grams</td>
+		<td class = "description">light brown sugar </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">3.0</td>
+		<td class="unit">medium</td>
+		<td class = "description">eggs </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">2.0</td>
+		<td class="unit">tbsp</td>
+		<td class = "description">honey or syrup </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">200.0</td>
+		<td class="unit">grams</td>
+		<td class = "description">rhubarb </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">200.0</td>
+		<td class="unit">grams</td>
+		<td class = "description">apple </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">3.0</td>
+		<td class="unit">tbsp</td>
+		<td class = "description">ginger </td>
+	</tr>
+</table>
+<br>
+<table class="method">
+	<th class="method"  width="200px" align="left">Method</th><th align="left"><button id="methodTempButton" onclick="unitFunction(1, true)">Change temp units</button><button id="methodMeasurementButton" onclick="unitFunction(2, true)">Change measurement units</button></th>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Preheat oven to <span class="quantity">180.0</span>&#186;<span class="unit">C</span>.</td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Chop rhubarb, peel and finely chop ginger. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Peel, core and chop apples into bowl of acidulated water. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Cream butter and sugar together in mixer. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Whisk in eggs individually with honey or syrup. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Stir in flour, baking powder, ginger and chopped fruit. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Pour resulting gloopy mixture into cake tin. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Bake for 1.25 hours. </td>
+	</tr>
+</table>
+<br>
+<table class="footer">
+	<tr>
+		<td class="serviceLabel" width="200px" align="left">Service: </td>
+		<td class="serviceDescription">Surprisingly good with marmalade!</td>
+	</tr>
+	<tr>
+		<td class="attributionLabel" width="200px" align="left">Attribution:</td>
+		<td class="attributionDescription"></td>
+		<td> <form action="index.html"><button type="submit">Index</button></form></td>
+	</tr>
+</table>
+</body>
+</html>

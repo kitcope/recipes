@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="recipe.css">
+	<title>Easy Broccoli Quiche</title>
+	<script language="javascript" src="recipe.js"></script> 
+</head>
+<body onLoad="unitFunction(0, false), unitFunction(1, false), unitFunction(2, false), timeFunction(), quantityFunction()" >
+<h2 class="recipeName">Easy Broccoli Quiche</h2>
+<div class="recipePrecis">Easy but impressive vegetarian dish.</div>
+<br>
+<table>
+	<th class="servesLabel" align="left">Serves</th>
+	<th colspan="7" align="left">
+		<select id="servesOption" onchange="unitFunction(0, false)">
+			<option value="1" >1</option>
+			<option value="2" >2</option>
+			<option value="3" >3</option>
+			<option value="4" >4</option>
+			<option value="5" >5</option>
+			<option value="6" selected="true">6</option>
+			<option value="7" >7</option>
+			<option value="8" >8</option>
+			<option value="9" >9</option>
+			<option value="10" >10</option>
+		</select>
+	</th>
+	<tr>
+		<td id="prepTimeLabel">Preparation:</td>
+		<td class=recipeTime id="prepTime">20.0</td>
+		<td id="prepTimeUnit">minutes</td>
+		<td></td>
+		<td></td>
+		<td>Start:</td>
+		<td><div id="startTime"></div></td>
+		<td><button onclick="timeFunction()">Reset</button></td>
+	</tr>
+	<tr>
+		<td id="cookTimeLabel">Cooking:</td>
+		<td class=recipeTime id="cookTime">30.0</td>
+		<td id="cookTimeUnit">minutes</td>
+		<td></td>
+		<td></td>
+		<td>End:</td>
+		<td><div id="endTime"></div></td>
+		<td></td>
+	</tr>
+</table>
+<br>
+<table class="ingredients">
+	<th class="ingredients" width="200px" align="left">Ingredients for pastry base</th>
+	<th colspan="3" align="left"><button id="ingredientUnitButton" onclick="unitFunction(0, true)" >Change units</button></th>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">200.0</td>
+		<td class="unit">grams</td>
+		<td class = "description">plain flour </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">115.0</td>
+		<td class="unit">grams</td>
+		<td class = "description">fat ( butter or lard combination) </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">1.0</td>
+		<td class="unit">egg</td>
+		<td class = "description"></td>
+	</tr>
+</table>
+<br>
+<table class="ingredients">
+	<th class="ingredients" width="200px" align="left">Ingredients for filling</th>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">3.0</td>
+		<td class="unit">tbsp</td>
+		<td class = "description">butter </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">1.0</td>
+		<td class="unit">onion</td>
+		<td class = "description"></td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">2.0</td>
+		<td class="unit">cloves</td>
+		<td class = "description">garlic </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">450.0</td>
+		<td class="unit">ml</td>
+		<td class = "description">fresh broccoli </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">350.0</td>
+		<td class="unit">ml</td>
+		<td class = "description">cheddar cheese </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">4.0</td>
+		<td class="unit">eggs</td>
+		<td class = "description"></td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">250.0</td>
+		<td class="unit">ml</td>
+		<td class = "description">milk </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">1.0</td>
+		<td class="unit">tsp</td>
+		<td class = "description">salt </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">0.5</td>
+		<td class="unit">tsp</td>
+		<td class = "description">ground black pepper </td>
+	</tr>
+</table>
+<br>
+<table class="method">
+	<th class="method"  width="200px" align="left">Method for base</th><th align="left"><button id="methodTempButton" onclick="unitFunction(1, true)">Change temp units</button><button id="methodMeasurementButton" onclick="unitFunction(2, true)">Change measurement units</button></th>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Preheat oven to <span class="quantity">180.0</span>&#186;<span class="unit">C</span>.</td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Combine pastry ingredients adding a little water if necessary </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Roll out and line <span class="quantity">25.0</span>&nbsp;<span class="unit">cm</span> diameter oven proof dish </td>
+	</tr>
+</table>
+<br>
+<table class="method">
+	<th class="method"  width="200px" align="left">Method for filling</th>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Preheat oven to <span class="quantity">190.0</span>&#186;<span class="unit">C</span>.</td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Crush garlic in garlic press. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Grate cheese. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Beat eggs. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Finely chop onion. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Melt <span class="quantity">2.0</span>&nbsp;<span class="unit">tbsp</span> butter in lidded saucepan over low heat. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Add onion, garlic and broccoli then close lid. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Cook slowly, stirring occasionally, until vegetables are soft. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Spoon vegetables onto base and sprinkle with cheese. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Whisk to combine eggs and milk, seasoning well. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Melt remaining <span class="quantity">1.0</span>&nbsp;<span class="unit">tbsp</span> butter and stir into egg mixture. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Pour combined mixture over vegetables and cheese. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Bake for 30 minutes until centre has set. </td>
+	</tr>
+</table>
+<br>
+<table class="footer">
+	<tr>
+		<td class="serviceLabel" width="200px" align="left">Service: </td>
+		<td class="serviceDescription">Serve hot or cold.</td>
+	</tr>
+	<tr>
+		<td class="attributionLabel" width="200px" align="left">Attribution:</td>
+		<td class="attributionDescription"></td>
+		<td> <form action="index.html"><button type="submit">Index</button></form></td>
+	</tr>
+</table>
+</body>
+</html>

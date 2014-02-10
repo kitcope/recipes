@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="recipe.css">
+	<title>Salsa Verde and Guacamole</title>
+	<script language="javascript" src="recipe.js"></script> 
+</head>
+<body onLoad="unitFunction(0, false), unitFunction(1, false), unitFunction(2, false), timeFunction(), quantityFunction()" >
+<h2 class="recipeName">Salsa Verde and Guacamole</h2>
+<div class="recipePrecis">Made together to reduce waste.</div>
+<br>
+<table>
+	<th class="servesLabel" align="left">Serves</th>
+	<th colspan="7" align="left">
+		<select id="servesOption" onchange="unitFunction(0, false)">
+			<option value="1" >1</option>
+			<option value="2" >2</option>
+			<option value="3" >3</option>
+			<option value="4" selected="true">4</option>
+			<option value="5" >5</option>
+			<option value="6" >6</option>
+			<option value="7" >7</option>
+			<option value="8" >8</option>
+			<option value="9" >9</option>
+			<option value="10" >10</option>
+		</select>
+	</th>
+	<tr>
+		<td id="prepTimeLabel">Preparation:</td>
+		<td class=recipeTime id="prepTime">30.0</td>
+		<td id="prepTimeUnit">mins</td>
+		<td></td>
+		<td></td>
+		<td>Start:</td>
+		<td><div id="startTime"></div></td>
+		<td><button onclick="timeFunction()">Reset</button></td>
+	</tr>
+	<tr>
+		<td id="cookTimeLabel">Cooking:</td>
+		<td class=recipeTime id="cookTime">1.0</td>
+		<td id="cookTimeUnit">hour</td>
+		<td></td>
+		<td></td>
+		<td>End:</td>
+		<td><div id="endTime"></div></td>
+		<td></td>
+	</tr>
+</table>
+<br>
+<table class="ingredients">
+	<th class="ingredients" width="200px" align="left">Ingredients</th>
+	<th colspan="3" align="left"><button id="ingredientUnitButton" onclick="unitFunction(0, true)" >Change units</button></th>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">6.0</td>
+		<td class="unit">tomatoes</td>
+		<td class = "description"></td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">4.0</td>
+		<td class="unit">onions</td>
+		<td class = "description"></td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">1.0</td>
+		<td class="unit">bunch</td>
+		<td class = "description">coriander leaves with stalks </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">1.0</td>
+		<td class="unit">chilli</td>
+		<td class = "description"></td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">2.0</td>
+		<td class="unit">tbsp</td>
+		<td class = "description">lemon juice </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">2.0</td>
+		<td class="unit">tbsp</td>
+		<td class = "description">lime juice </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">2.0</td>
+		<td class="unit">ripe</td>
+		<td class = "description">avocados </td>
+	</tr>
+</table>
+<br>
+<table class="method">
+	<th class="method"  width="200px" align="left">Method for Salsa</th><th align="left"><button id="methodTempButton" onclick="unitFunction(1, true)">Change temp units</button><button id="methodMeasurementButton" onclick="unitFunction(2, true)">Change measurement units</button></th>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Chop tomato flesh into <span class="quantity">0.25</span>&nbsp;<span class="unit">inch</span> squares (remove skin if desired). </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Reserve tomato pips and juice. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Chop onion into <span class="quantity">0.25</span>&nbsp;<span class="unit">inch</span> pieces. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Chop coriander leaves reserving stalks. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Finely chop deseeded chilli. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Mix tomato, onion, coriander and chilli in a bowl. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Stir in lemon juice and cover in clingfilm. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Leave in refrigerator at least 1 hour. </td>
+	</tr>
+</table>
+<br>
+<table class="method">
+	<th class="method"  width="200px" align="left">Method for Guacamole</th>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Stone avocados and scoop out flesh into food processor. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Add reserved coriander stalks and tomato pips and juice. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Add lime juice and blitz to a creamy consistency. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Turn out into bowl and cover with clingfilm. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Leave in refrigerator for at least 1 hour. </td>
+	</tr>
+</table>
+<br>
+<table class="footer">
+	<tr>
+		<td class="serviceLabel" width="200px" align="left">Service: </td>
+		<td class="serviceDescription">Serve with Mexican tortillas</td>
+	</tr>
+	<tr>
+		<td class="attributionLabel" width="200px" align="left">Attribution:</td>
+		<td class="attributionDescription"></td>
+		<td> <form action="index.html"><button type="submit">Index</button></form></td>
+	</tr>
+</table>
+</body>
+</html>

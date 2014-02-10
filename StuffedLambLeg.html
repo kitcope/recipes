@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="recipe.css">
+	<title>Stuffed leg of lamb</title>
+	<script language="javascript" src="recipe.js"></script> 
+</head>
+<body onLoad="unitFunction(0, false), unitFunction(1, false), unitFunction(2, false), timeFunction(), quantityFunction()" >
+<h2 class="recipeName">Stuffed leg of lamb</h2>
+<div class="recipePrecis">Easy to cook celebratory summer dish, and really tasty.</div>
+<br>
+<table>
+	<th class="servesLabel" align="left">Serves</th>
+	<th colspan="7" align="left">
+		<select id="servesOption" onchange="unitFunction(0, false)">
+			<option value="1" >1</option>
+			<option value="2" >2</option>
+			<option value="3" >3</option>
+			<option value="4" >4</option>
+			<option value="5" >5</option>
+			<option value="6" selected="true">6</option>
+			<option value="7" >7</option>
+			<option value="8" >8</option>
+			<option value="9" >9</option>
+			<option value="10" >10</option>
+		</select>
+	</th>
+	<tr>
+		<td id="prepTimeLabel">Preparation:</td>
+		<td class=recipeTime id="prepTime">20.0</td>
+		<td id="prepTimeUnit">minutes</td>
+		<td></td>
+		<td></td>
+		<td>Start:</td>
+		<td><div id="startTime"></div></td>
+		<td><button onclick="timeFunction()">Reset</button></td>
+	</tr>
+	<tr>
+		<td id="cookTimeLabel">Cooking:</td>
+		<td class=recipeTime id="cookTime">60.0</td>
+		<td id="cookTimeUnit">minutes</td>
+		<td></td>
+		<td></td>
+		<td>End:</td>
+		<td><div id="endTime"></div></td>
+		<td></td>
+	</tr>
+</table>
+<br>
+<table class="ingredients">
+	<th class="ingredients" width="200px" align="left">Ingredients</th>
+	<th colspan="3" align="left"><button id="ingredientUnitButton" onclick="unitFunction(0, true)" >Change units</button></th>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">6.0</td>
+		<td class="unit">anchovy</td>
+		<td class = "description">fillets in oil </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">1.0</td>
+		<td class="unit">tbsp</td>
+		<td class = "description">green olives </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">1.0</td>
+		<td class="unit">cubic</td>
+		<td class = "description">centimetere tamarind block </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">2.0</td>
+		<td class="unit">garlic</td>
+		<td class = "description">cloves </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">2.0</td>
+		<td class="unit">large</td>
+		<td class = "description">sprigs of rosemary </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">1.0</td>
+		<td class="unit">tbsp</td>
+		<td class = "description">lemon juice </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">1.0</td>
+		<td class="unit">tbsp</td>
+		<td class = "description">olive oil ( or from anchovy container) </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">0.5</td>
+		<td class="unit">tsp</td>
+		<td class = "description">freshly ground black pepper </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">2.0</td>
+		<td class="unit">kg</td>
+		<td class = "description">leg of lamb </td>
+	</tr>
+</table>
+<br>
+<table class="method">
+	<th class="method"  width="200px" align="left">Method</th><th align="left"><button id="methodTempButton" onclick="unitFunction(1, true)">Change temp units</button><button id="methodMeasurementButton" onclick="unitFunction(2, true)">Change measurement units</button></th>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Preheat oven to <span class="quantity">200.0</span>&#186;<span class="unit">C</span>.( fan). </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Bone out leg of lamb. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Heap on chopping board the anchovies, olives, garlic and leaves from the rosemary. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Chop well to form thick paste. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Transfer to bowl and stir in oil and lemon juice. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Lay lamb skin side down and slash any thick areas of flesh. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Spread paste generously over meat surface. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Roll up joint and tie with string. Insert temperature probe if available. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Place seam side down in roasting tin in centre of oven to brown for 25 minutes. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Turn heat down to <span class="quantity">160.0</span>&#186;<span class="unit">C</span>.and cook for 40 minutes or until probe reaches <span class="quantity">60.0</span>&#186;<span class="unit">C</span>.</td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Leave to rest for 20 minutes before carving. </td>
+	</tr>
+</table>
+<br>
+<table class="footer">
+	<tr>
+		<td class="serviceLabel" width="200px" align="left">Service: </td>
+		<td class="serviceDescription">Serve either hot or cold with new potatoes and salad.</td>
+	</tr>
+	<tr>
+		<td class="attributionLabel" width="200px" align="left">Attribution:</td>
+		<td class="attributionDescription"></td>
+		<td> <form action="index.html"><button type="submit">Index</button></form></td>
+	</tr>
+</table>
+</body>
+</html>

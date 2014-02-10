@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="recipe.css">
+	<title>Pork pie with chestnut and apple</title>
+	<script language="javascript" src="recipe.js"></script> 
+</head>
+<body onLoad="unitFunction(0, false), unitFunction(1, false), unitFunction(2, false), timeFunction(), quantityFunction()" >
+<h2 class="recipeName">Pork pie with chestnut and apple</h2>
+<div class="recipePrecis">Magnificent large golden pie.</div>
+<br>
+<table>
+	<th class="servesLabel" align="left">Serves</th>
+	<th colspan="7" align="left">
+		<select id="servesOption" onchange="unitFunction(0, false)">
+			<option value="1" >1</option>
+			<option value="2" >2</option>
+			<option value="3" >3</option>
+			<option value="4" >4</option>
+			<option value="5" >5</option>
+			<option value="6" selected="true">6</option>
+			<option value="7" >7</option>
+			<option value="8" >8</option>
+			<option value="9" >9</option>
+			<option value="10" >10</option>
+		</select>
+	</th>
+	<tr>
+		<td id="prepTimeLabel">Preparation:</td>
+		<td class=recipeTime id="prepTime">30.0</td>
+		<td id="prepTimeUnit">minutes</td>
+		<td></td>
+		<td></td>
+		<td>Start:</td>
+		<td><div id="startTime"></div></td>
+		<td><button onclick="timeFunction()">Reset</button></td>
+	</tr>
+	<tr>
+		<td id="cookTimeLabel">Cooking:</td>
+		<td class=recipeTime id="cookTime">45.0</td>
+		<td id="cookTimeUnit">minutes</td>
+		<td></td>
+		<td></td>
+		<td>End:</td>
+		<td><div id="endTime"></div></td>
+		<td></td>
+	</tr>
+</table>
+<br>
+<table class="ingredients">
+	<th class="ingredients" width="200px" align="left">Ingredients</th>
+	<th colspan="3" align="left"><button id="ingredientUnitButton" onclick="unitFunction(0, true)" >Change units</button></th>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">275.0</td>
+		<td class="unit">grams</td>
+		<td class = "description">puff pastry </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">125.0</td>
+		<td class="unit">grams</td>
+		<td class = "description">cooked ham </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">0.0</td>
+		<td class="unit"></td>
+		<td class = "description">25o grams any lean pork </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">200.0</td>
+		<td class="unit">grams</td>
+		<td class = "description">smoked bacon or lardons </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">2.0</td>
+		<td class="unit">onions</td>
+		<td class = "description"></td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">2.0</td>
+		<td class="unit">tbsp</td>
+		<td class = "description">olive oil </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">1.0</td>
+		<td class="unit">tbsp</td>
+		<td class = "description">butter </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">2.0</td>
+		<td class="unit">cloves</td>
+		<td class = "description">garlic </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">1.0</td>
+		<td class="unit">sprig</td>
+		<td class = "description">thyme </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">2.0</td>
+		<td class="unit">apples</td>
+		<td class = "description"></td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">250.0</td>
+		<td class="unit">grams</td>
+		<td class = "description">whole chestnuts </td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">3.0</td>
+		<td class="unit">eggs</td>
+		<td class = "description"></td>
+	</tr>
+	<tr class="ingredient" onClick="boldFunction(this)">
+		<td></td>
+		<td class="servesQuantity">0.0</td>
+		<td class="unit"></td>
+		<td class = "description">salt and pepper </td>
+	</tr>
+</table>
+<br>
+<table class="method">
+	<th class="method"  width="200px" align="left">Method</th><th align="left"><button id="methodTempButton" onclick="unitFunction(1, true)">Change temp units</button><button id="methodMeasurementButton" onclick="unitFunction(2, true)">Change measurement units</button></th>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Preheat oven to <span class="quantity">200.0</span>&#186;<span class="unit">C</span>.</td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Finely chop onions and garlic. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Take leaves off thyme, discard stalks. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Butter a <span class="quantity">26.0</span>&nbsp;<span class="unit">cm</span> diameter flan or pie dish. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Divide pastry into two, one piece slightly larger than the other. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Roll out larger piece to line dish, the pastry will get quite thin. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Place lined dish in refrigerator. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Mince or pulse in food processor the ham, pork and bacon. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Sweat onions down in oil and butter until soft and translucent. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Add garlic and thyme and continue to cook for 4 or 5 minutes. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">leave onion mixture to cool. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Peel and core apples and slice finely. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Beat eggs together. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Fold the apples, onions, chestnuts and 2.5 eggs into the pork mixture. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Season mixture and pepper well. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Pack mixture into pie base. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Roll out smaller piece of pastry to cover top of pie. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Brush join with egg and crimp together. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Decorate top with any spare pastry and brush top with rest of egg. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Pierce top with a few steam vents. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Place in oven for 20 minutes. </td>
+	</tr>
+	<tr class="methodStep" onClick="boldFunction(this)">
+		<td></td>
+		<td class = "description">Reduce temperature to <span class="quantity">180.0</span>&#186;<span class="unit">C</span>.and cook for further 25 minutes. </td>
+	</tr>
+</table>
+<br>
+<table class="footer">
+	<tr>
+		<td class="serviceLabel" width="200px" align="left">Service: </td>
+		<td class="serviceDescription">Serve hot or cold.</td>
+	</tr>
+	<tr>
+		<td class="attributionLabel" width="200px" align="left">Attribution:</td>
+		<td class="attributionDescription">Michel Roux jnr</td>
+		<td> <form action="index.html"><button type="submit">Index</button></form></td>
+	</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+<title>Recipe Index</title>
+	<link rel="stylesheet" type="text/css" href="recipe.css">
+	<script language="javascript">
+
+var found = [];
+		function search(){
+			var searchText = document.getElementById("searchText").value.toLowerCase();
+			var recipeNames = document.getElementsByTagName("a");
+			if(found != null && found.length > 0){
+				for( i in found){
+					var searched = recipeNames[found[i]].innerHTML.replace("<b>","").replace("</b>","").replace("<B>","").replace("</B>","");
+					recipeNames[found[i]].innerHTML = searched;
+				}
+			}
+			document.getElementById("searchText").value = "";
+			if(searchText.length == 0){
+				return;
+			}
+			var j = 0;
+			for( i in recipeNames){
+				try{
+					var searched = recipeNames[i].innerHTML;
+					if(searched  .toLowerCase().indexOf(searchText)> -1){
+						recipeNames[i].innerHTML = "<b>" + searched   + "</b>";
+						found[j++]=i;
+					}
+				}catch(ignore){
+				}
+			}
+		}
+	</script>
+</head>
+
+
+
+<body>
+	<table>
+		<tr>
+			<td>
+				<h2>Recipe Index</h2>
+			</td>
+			
+			<td width="300px" align="right">
+				<form action="javascript:search()">
+					<input id="searchText" type="text"></input>
+					<button type="submit">Search</button>
+				</form>
+			</td>
+		</tr>
+	</table>
+<div style="float: left; width: 50%">
+<ol>
+	<li>
+		<a href="AppleCrumble.html">Apple Crumble</a>
+	</li>
+	<li>
+		<a href="AppleRhubarbGingerCake.html">Apple Rhubarb and Ginger Cake</a>
+	</li>
+	<li>
+		<a href="BroccoliQuiche.html">Broccoli Quiche</a>
+	</li>
+	<li>
+		<a href="CarrotLentilSoup.html">Carrot and Lentil Soup</a>
+	</li>
+	<li>
+		<a href="ChickenAlsace.html">Chicken Alsace</a>
+	</li>
+	<li>
+		<a href="ChickenSatay.html">Chicken Satay</a>
+	</li>
+	<li>
+		<a href="ChocolateMacaroons.html">Chocolate Macaroons</a>
+	</li>
+	<li>
+		<a href="FatFreeSoup.html">Fat Free Soup</a>
+	</li>
+	<li>
+		<a href="GreenBeanSoup.html">Green Bean Soup</a>
+	</li>
+	<li>
+		<a href="GreenTomatoChutney.html">Green Tomato Chutney</a>
+	</li>
+	<li>
+		<a href="MangoMouse.html">Mango Mouse</a>
+	</li>
+	<li>
+		<a href="MarrowRedWine.html">Marrow in Red Wine</a>
+	</li>
+	<li>
+		<a href="MushroomSoup.html">Mushroom Soup</a>
+	</li>
+	<li>
+		<a href="PeaBroadBeanRisotto.html">Pea and Broad Bean Risotto</a>
+	</li>
+	<li>
+		<a href="PickledCarrots.html">Pickled Carrots</a>
+	</li>
+	<li>
+		<a href="PickledWalnuts.html">Pickled Walnuts</a>
+	</li>
+</ol>
+</div>
+
+<div style="float: right; width: 50%">
+<ol>
+
+	<li>
+		<a href="PlumIceCream.html">Plum Ice Cream</a>
+	</li>
+	<li>
+		<a href="PoachedPearsRedWine.html">Poached Pears in Red Wine</a>
+	</li>
+	<li>
+		<a href="PorkPieChestnutApple.html">Pork Pie with Chestnut and Apple</a>
+	</li>
+	<li>
+		<a href="PuyLentil.html">Puy Lentils</a>
+	</li>
+	<li>
+		<a href="RoastPorkWhiteWine.html">Roast Pork with White Wine</a>
+	</li>
+	<li>
+		<a href="SagAloo.html">Sag Aloo</a>
+	</li>
+	<li>
+		<a href="SalsaVerdeAndGuacamole.html">Salsa Verde and Guacamole</a>
+	</li>
+	<li>
+		<a href="SpinachSoup.html">Spinach Soup</a>
+	</li>
+	<li>
+		<a href="SteakAuPoivre.html">Steak au Poivre</a>
+	</li>
+	<li>
+		<a href="StuffedLambLeg.html">Stuffed Leg of Lamb</a>
+	</li>
+	<li>
+		<a href="TarteTartin.html">Tarte Tartin</a>
+	</li>
+	<li>
+		<a href="ThaiGreenCurry.html">Thai Green Curry</a>
+	</li>
+	<li>
+		<a href="ThaiPrawns.html">Thai Prawns</a>
+	</li>
+	<li>
+		<a href="TomYumSoup.html">Tom Yum Soup</a>
+	</li>
+	<li>
+		<a href="TurkeyLeekHamPies.html">Turkey Leek and Ham Pies</a>
+	</li>
+	<li>
+		<a href="WatercressSoup.html">Watercress Soup</a>
+	</li>
+</ol>
+</div>
+</body>
+</html>

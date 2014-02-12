@@ -66,9 +66,9 @@ public class RecipeWriter {
 	 * <br>
 	 * 
 	 * <table class="ingredients">
-	 * <th class="ingredients">Ingredients</th>
-	 * <th colspan="3" align="left"><button id="ingredientUnitButton"
-	 * onclick="unitFunction(0, true)" >Change units</button></th>
+	 *<th class="ingredients">Ingredients </th><th  colspan="3" align="left"><button id="ingredientUnitButton" onclick="unitFunction(0, true)" >Change units</button>
+	 *<button id="highlightUpButton" onclick="highlightFunction(0)" >Highlight up &#9650;</button> 
+	 *<button id="highlightDownButton" onclick="highlightFunction(1)" >Highlight down &#9660;</button> </th>
 	 * <tr class="ingredient" onClick="boldFunction(this)">
 	 * <td></td>
 	 * <td class="servesQuantity">100</td>
@@ -363,7 +363,10 @@ public class RecipeWriter {
 							+"<table class=\"ingredients\">\r\n"
 							+"\t<th class=\"ingredients\" width=\"200px\" align=\"left\">"+ ingredients + "</th>\r\n");
 					if(!ingredientStart){
-						output.append("\t<th colspan=\"3\" align=\"left\"><button id=\"ingredientUnitButton\" onclick=\"unitFunction(0, true)\" >Change units</button></th>\r\n");
+						// was output.append("\t<th colspan=\"3\" align=\"left\"><button id=\"ingredientUnitButton\" onclick=\"unitFunction(0, true)\" >Change units</button></th>\r\n");
+						 output.append("\t<th  colspan=\"3\" align=\"left\"><button id=\"ingredientUnitButton\" onclick=\"unitFunction(0, true)\" >Change units</button>"
+						+"&nbsp;<button id=\"highlightUpButton\" onclick=\"highlightFunction(0)\" >Highlight up &#9650;</button>" 
+						+"&nbsp;<button id=\"highlightDownButton\" onclick=\"highlightFunction(1)\" >Highlight down &#9660;</button> </th>\r\n");
 					}
 					
 							ingredientStart = true;
@@ -381,7 +384,7 @@ public class RecipeWriter {
 							+"<table class=\"method\">\r\n"
 							+"\t<th class=\"method\"  width=\"200px\" align=\"left\">"+method+"</th>");
 					if(!methodStart){
-						output.append("<th align=\"left\"><button id=\"methodTempButton\" onclick=\"unitFunction(1, true)\">Change temp units</button><button id=\"methodMeasurementButton\" onclick=\"unitFunction(2, true)\">Change measurement units</button></th>");
+						output.append("<th align=\"left\"><button id=\"methodTempButton\" onclick=\"unitFunction(1, true)\">Change temp units</button>&nbsp;<button id=\"methodMeasurementButton\" onclick=\"unitFunction(2, true)\">Change measurement units</button></th>");
 					}
 					output.append("\r\n");
 					methodStart=true;

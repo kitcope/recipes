@@ -305,3 +305,33 @@ function timeFunction(){ // Compute finish time in local time  not UTC
 
 }
 
+function highlightFunction( direction){
+
+	var element = lastEnboldened;
+        var elements0 = document.querySelectorAll("." + elementClassNames[0]);
+	var elements1 = document.querySelectorAll("." + elementClassNames[1]);
+	var elements = [];
+         for(i in elements0){
+            elements[i] = elements0[i];   
+	}    
+	 for(i in elements1){		
+            elements.push(elements1[i]);   
+	}  
+  	 if(element == null){
+		element = elements[0]; 
+	}else{
+	 	for(i in elements){
+			if(element === elements[i]){
+				if(direction == 0 && i>0){
+					boldFunction(elements[--i]); 
+					return;
+				}
+				if(direction == 1 && i<(elements.length - 1)){
+					boldFunction(elements[++i]); 
+					return;
+				}
+			}
+		}
+	}
+	boldFunction(element);
+}

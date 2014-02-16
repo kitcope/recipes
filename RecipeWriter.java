@@ -286,7 +286,7 @@ public class RecipeWriter {
 							+ "</title>\r\n"
 							+ "\t<script language=\"javascript\" src=\"recipe.js\"></script> \r\n"
 							+ "</head>\r\n"
-							+ "<body onLoad=\"unitFunction(0, false), unitFunction(1, false), unitFunction(2, false), timeFunction(), quantityFunction()\" >\r\n"
+							+ "<body onLoad=\"findHighlightableElements(), unitFunction(0, false), unitFunction(1, false), unitFunction(2, false), timeFunction(), quantityFunction()\" >\r\n"
 							+ "<h2 class=\"recipeName\">" + name + "</h2>\r\n");
 				}
 				if (s.trim().startsWith("Precis:")) {
@@ -361,12 +361,12 @@ public class RecipeWriter {
 					output.append("</table>\r\n"
 							+"<br>\r\n"
 							+"<table class=\"ingredients\">\r\n"
-							+"\t<th class=\"ingredients\" width=\"200px\" align=\"left\">"+ ingredients + "</th>\r\n");
+							+"\t<th class=\"ingredients\" width=\"100px\" align=\"left\">"+ ingredients + "</th>\r\n");
 					if(!ingredientStart){
 						// was output.append("\t<th colspan=\"3\" align=\"left\"><button id=\"ingredientUnitButton\" onclick=\"unitFunction(0, true)\" >Change units</button></th>\r\n");
 						 output.append("\t<th  colspan=\"3\" align=\"left\"><button id=\"ingredientUnitButton\" onclick=\"unitFunction(0, true)\" >Change units</button>"
-						+"&nbsp;<button id=\"highlightUpButton\" onclick=\"highlightFunction(0)\" >Highlight up &#9650;</button>" 
-						+"&nbsp;<button id=\"highlightDownButton\" onclick=\"highlightFunction(1)\" >Highlight down &#9660;</button> </th>\r\n");
+						+"&nbsp;Highlight&nbsp;<button id=\"highlightUpButton\" onclick=\"highlightFunction(0)\" >Up &#9650;</button>" 
+						+"&nbsp;<button id=\"highlightDownButton\" onclick=\"highlightFunction(1)\" >Down &#9660;</button> </th>\r\n");
 					}
 					
 							ingredientStart = true;
@@ -382,9 +382,9 @@ public class RecipeWriter {
 					output.append("</table>\r\n"
 							+"<br>\r\n"
 							+"<table class=\"method\">\r\n"
-							+"\t<th class=\"method\"  width=\"200px\" align=\"left\">"+method+"</th>");
+							+"\t<th class=\"method\"  width=\"100px\" align=\"left\">"+method+"</th>");
 					if(!methodStart){
-						output.append("<th align=\"left\"><button id=\"methodTempButton\" onclick=\"unitFunction(1, true)\">Change temp units</button>&nbsp;<button id=\"methodMeasurementButton\" onclick=\"unitFunction(2, true)\">Change measurement units</button></th>");
+						output.append("<th align=\"left\">&nbsp;Change&nbsp;<button id=\"methodTempButton\" onclick=\"unitFunction(1, true)\">Temp units</button>&nbsp;<button id=\"methodMeasurementButton\" onclick=\"unitFunction(2, true)\">Measurement units</button></th>");
 					}
 					output.append("\r\n");
 					methodStart=true;
@@ -402,7 +402,7 @@ public class RecipeWriter {
 							+"<br>\r\n"
 							+"<table class=\"footer\">\r\n"
 							+"\t<tr>\r\n"
-							+"\t\t<td class=\"serviceLabel\" width=\"200px\" align=\"left\">Service: </td>\r\n" 
+							+"\t\t<td class=\"serviceLabel\" width=\"100px\" align=\"left\">Service: </td>\r\n" 
 							+"\t\t<td class=\"serviceDescription\">" + service + "</td>\r\n"
 							+"\t</tr>\r\n");
 					continue;
@@ -417,7 +417,7 @@ public class RecipeWriter {
 					String attribution = s.substring(s.indexOf("Attribution:") + 12)
 							.trim();
 					output.append("\t<tr>\r\n"
-							+"\t\t<td class=\"attributionLabel\" width=\"200px\" align=\"left\">Attribution:</td>\r\n" 
+							+"\t\t<td class=\"attributionLabel\" width=\"100px\" align=\"left\">Attribution:</td>\r\n" 
 							+"\t\t<td class=\"attributionDescription\">" + attribution + "</td>\r\n"
 							+"\t\t<td> <form action=\"index.html\"><button type=\"submit\">Index</button></form></td>\r\n"
 							+"\t</tr>\r\n"

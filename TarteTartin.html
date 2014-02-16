@@ -5,7 +5,7 @@
 	<title>Tarte Tartin</title>
 	<script language="javascript" src="recipe.js"></script> 
 </head>
-<body onLoad="unitFunction(0, false), unitFunction(1, false), unitFunction(2, false), timeFunction(), quantityFunction()" >
+<body onLoad="findHighlightableElements(), unitFunction(0, false), unitFunction(1, false), unitFunction(2, false), timeFunction(), quantityFunction()" >
 <h2 class="recipeName">Tarte Tartin</h2>
 <div class="recipePrecis">Innovative method to produce French classic.</div>
 <br>
@@ -48,8 +48,8 @@
 </table>
 <br>
 <table class="ingredients">
-	<th class="ingredients" width="200px" align="left">Ingredients</th>
-	<th  colspan="3" align="left"><button id="ingredientUnitButton" onclick="unitFunction(0, true)" >Change units</button>&nbsp;<button id="highlightUpButton" onclick="highlightFunction(0)" >Highlight up &#9650;</button>&nbsp;<button id="highlightDownButton" onclick="highlightFunction(1)" >Highlight down &#9660;</button> </th>
+	<th class="ingredients" width="100px" align="left">Ingredients</th>
+	<th  colspan="3" align="left"><button id="ingredientUnitButton" onclick="unitFunction(0, true)" >Change units</button>&nbsp;Highlight&nbsp;<button id="highlightUpButton" onclick="highlightFunction(0)" >Up &#9650;</button>&nbsp;<button id="highlightDownButton" onclick="highlightFunction(1)" >Down &#9660;</button> </th>
 	<tr class="ingredient" onClick="boldFunction(this)">
 		<td></td>
 		<td class="servesQuantity">320.0</td>
@@ -101,7 +101,7 @@
 </table>
 <br>
 <table class="method">
-	<th class="method"  width="200px" align="left">Method for making pastry</th><th align="left"><button id="methodTempButton" onclick="unitFunction(1, true)">Change temp units</button>&nbsp;<button id="methodMeasurementButton" onclick="unitFunction(2, true)">Change measurement units</button></th>
+	<th class="method"  width="100px" align="left">Method for making pastry</th><th align="left">&nbsp;Change&nbsp;<button id="methodTempButton" onclick="unitFunction(1, true)">Temp units</button>&nbsp;<button id="methodMeasurementButton" onclick="unitFunction(2, true)">Measurement units</button></th>
 	<tr class="methodStep" onClick="boldFunction(this)">
 		<td></td>
 		<td class = "description">Mix flour, butter and egg yolks in mixer and pulse until dough forms. </td>
@@ -117,7 +117,7 @@
 </table>
 <br>
 <table class="method">
-	<th class="method"  width="200px" align="left">Method for preparing apples</th>
+	<th class="method"  width="100px" align="left">Method for preparing apples</th>
 	<tr class="methodStep" onClick="boldFunction(this)">
 		<td></td>
 		<td class = "description">Put 1 litre in bowl and acidulate with several squeezes of lemon juice. </td>
@@ -133,7 +133,7 @@
 </table>
 <br>
 <table class="method">
-	<th class="method"  width="200px" align="left">Method for making caramel</th>
+	<th class="method"  width="100px" align="left">Method for making caramel</th>
 	<tr class="methodStep" onClick="boldFunction(this)">
 		<td></td>
 		<td class = "description">Cut butter into <span class="quantity">1.0</span>&nbsp;<span class="unit">cm</span> cubes. </td>
@@ -161,7 +161,7 @@
 </table>
 <br>
 <table class="method">
-	<th class="method"  width="200px" align="left">Method for baking apples</th>
+	<th class="method"  width="100px" align="left">Method for baking apples</th>
 	<tr class="methodStep" onClick="boldFunction(this)">
 		<td></td>
 		<td class = "description">Preheat oven to <span class="quantity">170.0</span>&#186;<span class="unit">C</span>.</td>
@@ -181,7 +181,7 @@
 </table>
 <br>
 <table class="method">
-	<th class="method"  width="200px" align="left">Method for baking pastry</th>
+	<th class="method"  width="100px" align="left">Method for baking pastry</th>
 	<tr class="methodStep" onClick="boldFunction(this)">
 		<td></td>
 		<td class = "description">Remove dish from oven. </td>
@@ -210,11 +210,11 @@
 <br>
 <table class="footer">
 	<tr>
-		<td class="serviceLabel" width="200px" align="left">Service: </td>
+		<td class="serviceLabel" width="100px" align="left">Service: </td>
 		<td class="serviceDescription">Serve slices with cream.</td>
 	</tr>
 	<tr>
-		<td class="attributionLabel" width="200px" align="left">Attribution:</td>
+		<td class="attributionLabel" width="100px" align="left">Attribution:</td>
 		<td class="attributionDescription">Combination of recipes by Raymond Blanc and Oliver Rowe</td>
 		<td> <form action="index.html"><button type="submit">Index</button></form></td>
 	</tr>

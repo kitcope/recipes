@@ -6,7 +6,10 @@ var origServes = -1;
 var changeUnit = false;
 var currentMultiplier = [];
 var lastEnboldened;
-
+var element;
+var elements0;
+var elements1;
+var elements;
 
 var elementClassNames = new Array ("ingredient","methodStep","methodStep"); // ingredient, temperature, method classes to change
 var quantityClassNames = new Array ("servesQuantity","quantity","quantity"); // quantity classes to change
@@ -266,13 +269,32 @@ function toggleBoldFunction(element){	// toggle bold in selected table row
 	}
 }
 
-function boldFunction(element){	// enbolden selected table row, clear previous bold row
+function enboldenFunction(element){	// enbolden selected table row, clear previous bold row
 	if(lastEnboldened != null && lastEnboldened != element){
 		toggleBoldFunction( lastEnboldened);
 	}
 	toggleBoldFunction( element);
 
 }
+
+function boldFunction(element){ // enbolden row above or below enboldened row depending on whether this row is above or below
+	if(lastEnboldened != null && lastEnboldened != element){
+		elementIndex = -1;
+		lastEnboldenedIndex = -1;
+		for(i in elements){
+			if(element === elements[i]){
+				elementIndex = i;
+			}
+			if(lastEnboldened === elements[i]){
+				lastEnboldenedIndex = i;
+			}
+		}
+		highlightFunction( parseInt(elementIndex) > parseInt(lastEnboldenedIndex) ? 1 : 0);
+		return;
+	}
+	enboldenFunction(element);
+}
+
 
 function toMinutes(unit){ // return minutes multiplier for days and hours
 	multiplier = 1;
@@ -305,33 +327,40 @@ function timeFunction(){ // Compute finish time in local time  not UTC
 
 }
 
-function highlightFunction( direction){
 
-	var element = lastEnboldened;
-        var elements0 = document.querySelectorAll("." + elementClassNames[0]);
-	var elements1 = document.querySelectorAll("." + elementClassNames[1]);
-	var elements = [];
+function findHighlightableElements(){
+
+	
+        elements0 = document.querySelectorAll("." + elementClassNames[0]);
+	elements1 = document.querySelectorAll("." + elementClassNames[1]);
+	elements = [];
          for(i in elements0){
             elements[i] = elements0[i];   
 	}    
 	 for(i in elements1){		
             elements.push(elements1[i]);   
 	}  
+}
+
+
+function highlightFunction( direction){
+
+	element = lastEnboldened;
   	 if(element == null){
 		element = elements[0]; 
 	}else{
 	 	for(i in elements){
 			if(element === elements[i]){
 				if(direction == 0 && i>0){
-					boldFunction(elements[--i]); 
+					enboldenFunction(elements[--i]); 
 					return;
 				}
 				if(direction == 1 && i<(elements.length - 1)){
-					boldFunction(elements[++i]); 
+					enboldenFunction(elements[++i]); 
 					return;
 				}
 			}
 		}
 	}
-	boldFunction(element);
+	enboldenFunction(element);
 }
